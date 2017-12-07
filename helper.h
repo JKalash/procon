@@ -4,7 +4,6 @@
  * the semaphore values (which are to be changed as needed).
  ******************************************************************/
 
-
 # include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
@@ -23,11 +22,11 @@ using namespace std;
 
 # define SEM_KEY 0x50 // Change this number as needed
 
-union semun {
-    int val;               /* used for SETVAL only */
-    struct semid_ds *buf;  /* used for IPC_STAT and IPC_SET */
-    ushort *array;         /* used for GETALL and SETALL */
-};
+//union semun {
+//    int val;               /* used for SETVAL only */
+//    struct semid_ds *buf;  /* used for IPC_STAT and IPC_SET */
+//    ushort *array;         /* used for GETALL and SETALL */
+//};
 
 int check_arg (char *);
 int sem_create (key_t, int);

@@ -35,6 +35,7 @@ int sem_create (key_t key, int num)
 
 int sem_init (int id, int num, int value)
 {
+
   union semun semctl_arg;
   semctl_arg.val = value;
   if (semctl (id, num, SETVAL, semctl_arg) < 0)
